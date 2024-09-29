@@ -32,5 +32,54 @@ h3 {
 h3.danger {
   background-color: $primary;
 }
-p { font-size: 14px; }
+p {
+  font-size: 14px;
+  text-align: justify;
+}
 
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+input, select, textarea, button {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: 0;
+  border: 1px solid $gray;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { color: #000000; }
+input::placeholder,
+textarea::placeholder {
+  color: #000000;
+}
+textarea {
+  padding: 10px;
+  resize: none;
+}
+input[type="range"] {
+  height: 7px;
+  outline: none;
+  border-radius: 3px;
+}
+button {
+  cursor: pointer;
+  background-color: $primary;
+  opacity: 0.8;
+  color: $light_gray;
+  font-weight: bold;
+}
+button:hover {
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+.value_box {
+  background-color: $primary;
+  color: $light_gray;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.tabs .hidden { display: none; }

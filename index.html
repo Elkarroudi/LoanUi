@@ -28,6 +28,62 @@
                 </div>
                 <!-- END STEPS -->
 
+                <!-- LOAN INFORMATION FORM  -->
+                <section class="loan_information"  >
+
+                    <label>
+                        <span>My Project :</span>
+                        <select>
+                            <option>I Need Money</option>
+                            <option>I finance my used vehicle</option>
+                            <option>I manage my unforeseen events</option>
+                            <option>I finance my New vehicle</option>
+                            <option>I equip my house</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span>I am :</span>
+                        <select>
+                            <option>Private sector employee</option>
+                            <option>Liberal profession</option>
+                            <option>Trader</option>
+                            <option>Artisan</option>
+                            <option>Retirement</option>
+                            <option>Other professions</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span>Amount ( In DH ) : <span class="value_box" id="amount_box" > 0 DH </span></span>
+                        <input type="range" name="amount" min="5000" max="1000000" step="1" value="10000" >
+                    </label>
+
+                    <label>
+                        <span>Duration ( In Month ) : <span class="value_box" id="duration_box" > 0 Month </span></span>
+                        <input type="range" name="duration" min="12" max="120" step="1" value="24" >
+                    </label>
+
+                    <label>
+                        <span>Loan Rate ( In DH )</span>
+                        <input type="text" name="loan_rate" readonly>
+                    </label>
+
+                    <button>Next</button>
+                    <div class="info_box" >
+                        <p>
+                            Simulation for indicative purposes only and not contractual.
+                            The minimum monthly payment is 180 dirhams.
+                            A ELK Loan customer may benefit from a more advantageous rate depending on their preferential conditions.
+                        </p>
+                        <p>
+                            In accordance with Law 09-08, you have the right to access, rectify, and object to the processing of your personal data.
+                            This processing is authorized by the CNDP under number A-GC-206/2014.
+                        </p>
+                    </div>
+
+                </section>
+                <!-- END LOAN INFORMATION FORM  -->
 
             </section>
             <!-- END TABS -->
@@ -67,5 +123,7 @@
 
         </section>
     </main>
+
+    <script src="styles/js/calculate_loan_rate.js"  ></script>
 </body>
 </html>

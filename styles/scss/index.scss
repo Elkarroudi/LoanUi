@@ -23,7 +23,7 @@ main { margin-top: 8%; }
 .tabs .steps .step {
   text-align: center;
   padding: 5px 0;
-  background-color: $light_gray;
+  background-color: $secondary;
   width: calc(100% / 3);
   border: 1px solid $third;
 }
@@ -41,6 +41,22 @@ main { margin-top: 8%; }
   bottom: -10%;
   transform: translateX(-50%) rotate(-45deg);
 }
+
+// Loan Information Css =========
+.loan_information {
+  background-color: $light_gray;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.tabs .info_box {
+  background-color: $secondary;
+  padding: 5px 10px;
+  border: 1px solid $third;
+  margin-top: 20px;
+}
+
 
 // Summary Css =========
 .summary {
@@ -65,4 +81,3 @@ main { margin-top: 8%; }
   font-weight: bold;
   color: $third;
 }
-

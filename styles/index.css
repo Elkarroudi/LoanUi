@@ -45,6 +45,65 @@ h3.danger {
 
 p {
   font-size: 14px;
+  text-align: justify;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+input, select, textarea, button {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: 0;
+  border: 1px solid #8d99ae;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #000000;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #000000;
+}
+
+textarea {
+  padding: 10px;
+  resize: none;
+}
+
+input[type=range] {
+  height: 7px;
+  outline: none;
+  border-radius: 3px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #BF4E30;
+  opacity: 0.8;
+  color: #E5EAFA;
+  font-weight: bold;
+}
+
+button:hover {
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+.value_box {
+  background-color: #BF4E30;
+  color: #E5EAFA;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.tabs .hidden {
+  display: none;
 }
 
 main {
@@ -71,7 +130,7 @@ main {
 .tabs .steps .step {
   text-align: center;
   padding: 5px 0;
-  background-color: #E5EAFA;
+  background-color: #C6CCB2;
   width: 33.3333333333%;
   border: 1px solid #093824;
 }
@@ -90,6 +149,21 @@ main {
   position: absolute;
   bottom: -10%;
   transform: translateX(-50%) rotate(-45deg);
+}
+
+.loan_information {
+  background-color: #E5EAFA;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tabs .info_box {
+  background-color: #C6CCB2;
+  padding: 5px 10px;
+  border: 1px solid #093824;
+  margin-top: 20px;
 }
 
 .summary {
