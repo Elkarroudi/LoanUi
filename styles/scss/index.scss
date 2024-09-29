@@ -10,7 +10,37 @@ main { margin-top: 8%; }
   align-items: start;
 }
 
+// Tabs Css =========
+.tabs {
+  border-radius: 5px;
+  width: 70%;
+}
 
+// Steps Css =========
+.tabs .steps {
+  display: flex;
+}
+.tabs .steps .step {
+  text-align: center;
+  padding: 5px 0;
+  background-color: $light_gray;
+  width: calc(100% / 3);
+  border: 1px solid $third;
+}
+.tabs .steps .active {
+  background-color: $third;
+  color: $light_gray;
+  position: relative;
+}
+.tabs .steps .active::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: $third;
+  position: absolute;
+  bottom: -10%;
+  transform: translateX(-50%) rotate(-45deg);
+}
 
 // Summary Css =========
 .summary {

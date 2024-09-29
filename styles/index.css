@@ -40,7 +40,7 @@ h3 {
 }
 
 h3.danger {
-  background-color: #d90429;
+  background-color: #BF4E30;
 }
 
 p {
@@ -57,6 +57,39 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: start;
+}
+
+.tabs {
+  border-radius: 5px;
+  width: 70%;
+}
+
+.tabs .steps {
+  display: flex;
+}
+
+.tabs .steps .step {
+  text-align: center;
+  padding: 5px 0;
+  background-color: #E5EAFA;
+  width: 33.3333333333%;
+  border: 1px solid #093824;
+}
+
+.tabs .steps .active {
+  background-color: #093824;
+  color: #E5EAFA;
+  position: relative;
+}
+
+.tabs .steps .active::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #093824;
+  position: absolute;
+  bottom: -10%;
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 .summary {
