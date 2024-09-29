@@ -1,0 +1,38 @@
+
+@import "global_rules";
+
+main { margin-top: 8%; }
+#loan_form {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+
+
+// Summary Css =========
+.summary {
+  width: 25%;
+  background-color: $light_gray;
+  border: 1px solid $dark ;
+  padding: 5px 10px;
+}
+.summary .title { color: $third; }
+.summary .contents {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.summary .contents .information_section div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.summary .contents .information_section .title {
+  font-weight: bold;
+  color: $third;
+}
+

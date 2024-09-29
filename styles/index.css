@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1b263b;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+}
+
+.container {
+  width: 65%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 13px;
+  background-color: #093824;
+  color: #E5EAFA;
+  padding: 5px 4px;
+}
+
+h3.danger {
+  background-color: #d90429;
+}
+
+p {
+  font-size: 14px;
+}
+
+main {
+  margin-top: 8%;
+}
+
+#loan_form {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.summary {
+  width: 25%;
+  background-color: #E5EAFA;
+  border: 1px solid #1b263b;
+  padding: 5px 10px;
+}
+
+.summary .title {
+  color: #093824;
+}
+
+.summary .contents {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summary .contents .information_section div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.summary .contents .information_section .title {
+  font-weight: bold;
+  color: #093824;
+}
+
+/*# sourceMappingURL=index.css.map */
