@@ -56,12 +56,12 @@
 
                     <label>
                         <span>Amount ( In DH ) : <span class="value_box" id="amount_box" > 0 DH </span></span>
-                        <input type="range" name="amount" min="5000" max="1000000" step="1" value="10000" >
+                        <input type="range" name="amount" min="5000" max="600000" step="1" value="33000" >
                     </label>
 
                     <label>
                         <span>Duration ( In Month ) : <span class="value_box" id="duration_box" > 0 Month </span></span>
-                        <input type="range" name="duration" min="12" max="120" step="1" value="24" >
+                        <input type="range" name="duration" min="12" max="120" step="1" value="36" >
                     </label>
 
                     <label>
@@ -70,23 +70,12 @@
                     </label>
 
                     <button>Next</button>
-                    <div class="info_box" >
-                        <p>
-                            Simulation for indicative purposes only and not contractual.
-                            The minimum monthly payment is 180 dirhams.
-                            A ELK Loan customer may benefit from a more advantageous rate depending on their preferential conditions.
-                        </p>
-                        <p>
-                            In accordance with Law 09-08, you have the right to access, rectify, and object to the processing of your personal data.
-                            This processing is authorized by the CNDP under number A-GC-206/2014.
-                        </p>
-                    </div>
 
                 </section>
                 <!-- END LOAN INFORMATION FORM  -->
 
                 <!-- CONTACT INFORMATION FORM  -->
-                <section class="contact_information"  >
+                <section class="contact_information hidden"  >
 
                     <label>
                         <span>Email : </span>
@@ -102,6 +91,76 @@
 
                 </section>
                 <!-- END CONTACT INFORMATION FORM  -->
+
+                <!-- PERSONAL INFORMATION FORM  -->
+                <section class="personal_information "  >
+
+                    <label>
+                        <span>First Name : </span>
+                        <input type="text" name="first_name" placeholder="John" >
+                    </label>
+
+                    <label>
+                        <span>Last Name : </span>
+                        <input type="text" name="ast_name" placeholder="Doe" >
+                    </label>
+
+                    <label>
+                        <span>CNIE : </span>
+                        <input type="text" name="cnie" placeholder="MD123456" >
+                    </label>
+
+                    <label>
+                        <span>Birth Date : </span>
+                        <input type="date" name="birth_date" >
+                    </label>
+
+                    <label>
+                        <span>Hiring Date : </span>
+                        <input type="date" name="hiring_date" >
+                    </label>
+
+                    <label>
+                        <span>Total Monthly Revenue : </span>
+                        <input type="number" name="monthly_revenue" placeholder="5000 DH" >
+                    </label>
+
+                    <span>Do you have any outstanding credits? : </span>
+                    <div style="display: flex; gap: 20px; " >
+                        <label class="normal" >
+                            <input type="radio" name="outstanding_credits" value="yes" >
+                            <span>Yes</span>
+                        </label>
+
+                        <label class="normal" >
+                            <input type="radio" name="outstanding_credits" value="no" >
+                            <span>No</span>
+                        </label>
+                    </div>
+
+                    <label class="normal" >
+                        <input type="checkbox" name="monthly_revenue" >
+                        <span>
+                            I have read and accept <a href="" ><u>the general conditions of use</u></a> appearing on the legal information, in particular the mention relating to the protection of personal data
+                        </span>
+                    </label>
+
+                    <button>Request Credit</button>
+
+                </section>
+                <!-- END PERSONAL INFORMATION FORM  -->
+
+                <div class="info_box" >
+                    <p>
+                        Simulation for indicative purposes only and not contractual.
+                        The minimum monthly payment is 180 dirhams.
+                        A ELK Loan customer may benefit from a more advantageous rate depending on their preferential conditions.
+                    </p>
+                    <p>
+                        In accordance with Law 09-08, you have the right to access, rectify, and object to the processing of your personal data.
+                        This processing is authorized by the CNDP under number A-GC-206/2014.
+                    </p>
+                </div>
 
             </section>
             <!-- END TABS -->
@@ -142,6 +201,6 @@
         </section>
     </main>
 
-    <script src="styles/js/calculate_loan_rate.js"  ></script>
+    <script src="styles/js/calculate_loan_rate.js" ></script>
 </body>
 </html>

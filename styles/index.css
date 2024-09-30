@@ -78,6 +78,11 @@ input[type=range] {
   border-radius: 3px;
 }
 
+input[type=radio], input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+
 button {
   cursor: pointer;
   background-color: #BF4E30;
@@ -102,8 +107,14 @@ button:hover {
   display: none;
 }
 
+.tabs .normal {
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
 main {
-  margin-top: 8%;
+  margin: 8% 0;
 }
 
 #loan_form {
@@ -147,8 +158,9 @@ main {
   transform: translateX(-50%) rotate(-45deg);
 }
 
-.loan_information, .contact_information {
+.loan_information, .contact_information, .personal_information {
   background-color: #E5EAFA;
+  border: 1px solid #093824;
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
