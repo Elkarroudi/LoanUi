@@ -49,10 +49,9 @@ input, select, textarea, button {
   outline: 0;
   border: 1px solid $gray;
 }
-input::-moz-placeholder, textarea::-moz-placeholder { color: #000000; }
 input::placeholder,
 textarea::placeholder {
-  color: #000000;
+  color: $gray;
 }
 textarea {
   padding: 10px;

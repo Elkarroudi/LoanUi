@@ -62,13 +62,9 @@ input, select, textarea, button {
   border: 1px solid #8d99ae;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #000000;
-}
-
 input::placeholder,
 textarea::placeholder {
-  color: #000000;
+  color: #8d99ae;
 }
 
 textarea {
@@ -151,7 +147,7 @@ main {
   transform: translateX(-50%) rotate(-45deg);
 }
 
-.loan_information {
+.loan_information, .contact_information {
   background-color: #E5EAFA;
   padding: 20px 15px;
   display: flex;
