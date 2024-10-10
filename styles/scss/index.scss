@@ -1,6 +1,11 @@
 
 @import "global_rules";
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 main { margin: 8% 0; }
 #loan_form {
   width: 100%;
@@ -82,3 +87,4 @@ main { margin: 8% 0; }
   font-weight: bold;
   color: $third;
 }
+

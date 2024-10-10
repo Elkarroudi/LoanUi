@@ -11,8 +11,11 @@
 
     <main>
         <header>
-            <a href="" > <img src="styles/img/logo.png" alt="Elk Loan's Logo" /></a>
-            <h1>Apply for Credit Online !</h1>
+            <div>
+                <a href="" > <img src="styles/img/logo.png" alt="Elk Loan's Logo" /></a>
+                <h1>Apply for Credit Online !</h1>
+            </div>
+            <button onclick="clear_loan_request_object()" >Clear Local Storage</button>
         </header>
 
         <section id="loan_form" >
@@ -28,127 +31,128 @@
                 </div>
                 <!-- END STEPS -->
 
-                <!-- LOAN INFORMATION FORM  -->
-                <section class="loan_information hidden"  >
+                <form method="post" >
+                    <!-- LOAN INFORMATION FORM  -->
+                    <section class="loan_information" id="loan_information" >
 
-                    <label>
-                        <span>My Project :</span>
-                        <select>
-                            <option>I Need Money</option>
-                            <option>I finance my used vehicle</option>
-                            <option>I manage my unforeseen events</option>
-                            <option>I finance my New vehicle</option>
-                            <option>I equip my house</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        <span>I am :</span>
-                        <select>
-                            <option>Private sector employee</option>
-                            <option>Liberal profession</option>
-                            <option>Trader</option>
-                            <option>Artisan</option>
-                            <option>Retirement</option>
-                            <option>Other professions</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        <span>Amount ( In DH ) : <span class="value_box" id="amount_box" > 0 DH </span></span>
-                        <input type="range" name="amount" min="5000" max="600000" step="1" value="33000" >
-                    </label>
-
-                    <label>
-                        <span>Duration ( In Month ) : <span class="value_box" id="duration_box" > 0 Month </span></span>
-                        <input type="range" name="duration" min="12" max="120" step="1" value="36" >
-                    </label>
-
-                    <label>
-                        <span>Loan Rate ( In DH )</span>
-                        <input type="text" name="loan_rate" readonly>
-                    </label>
-
-                    <button>Next</button>
-
-                </section>
-                <!-- END LOAN INFORMATION FORM  -->
-
-                <!-- CONTACT INFORMATION FORM  -->
-                <section class="contact_information hidden"  >
-
-                    <label>
-                        <span>Email : </span>
-                        <input type="text" name="email" placeholder="john@xyz.com" >
-                    </label>
-
-                    <label>
-                        <span>Phone Number : </span>
-                        <input type="number" name="email" placeholder="0612345678" >
-                    </label>
-
-                    <button>Next</button>
-
-                </section>
-                <!-- END CONTACT INFORMATION FORM  -->
-
-                <!-- PERSONAL INFORMATION FORM  -->
-                <section class="personal_information "  >
-
-                    <label>
-                        <span>First Name : </span>
-                        <input type="text" name="first_name" placeholder="John" >
-                    </label>
-
-                    <label>
-                        <span>Last Name : </span>
-                        <input type="text" name="ast_name" placeholder="Doe" >
-                    </label>
-
-                    <label>
-                        <span>CNIE : </span>
-                        <input type="text" name="cnie" placeholder="MD123456" >
-                    </label>
-
-                    <label>
-                        <span>Birth Date : </span>
-                        <input type="date" name="birth_date" >
-                    </label>
-
-                    <label>
-                        <span>Hiring Date : </span>
-                        <input type="date" name="hiring_date" >
-                    </label>
-
-                    <label>
-                        <span>Total Monthly Revenue : </span>
-                        <input type="number" name="monthly_revenue" placeholder="5000 DH" >
-                    </label>
-
-                    <span>Do you have any outstanding credits? : </span>
-                    <div style="display: flex; gap: 20px; " >
-                        <label class="normal" >
-                            <input type="radio" name="outstanding_credits" value="yes" >
-                            <span>Yes</span>
+                        <label>
+                            <span>My Project :</span>
+                            <select name="project" >
+                                <option value="I Need Money" selected >I Need Money</option>
+                                <option value="I finance my used vehicle" >I finance my used vehicle</option>
+                                <option value="I manage my unforeseen events" >I manage my unforeseen events</option>
+                                <option value="I finance my New vehicle" >I finance my New vehicle</option>
+                                <option value="I equip my house" >I equip my house</option>
+                            </select>
                         </label>
 
-                        <label class="normal" >
-                            <input type="radio" name="outstanding_credits" value="no" >
-                            <span>No</span>
+                        <label>
+                            <span>I am :</span>
+                            <select name="profession" >
+                                <option value="Private Sector Employee" selected >Private sector employee</option>
+                                <option value="Liberal Profession" >Liberal profession</option>
+                                <option value="Artisan" >Artisan</option>
+                                <option value="Retirement" >Retirement</option>
+                                <option value="Other" >Other professions</option>
+                            </select>
                         </label>
-                    </div>
 
-                    <label class="normal" >
-                        <input type="checkbox" name="monthly_revenue" >
-                        <span>
+                        <label>
+                            <span>Amount ( In DH ) : <span class="value_box" id="amount_box" > 0 DH </span></span>
+                            <input type="range" name="amount" min="5000" max="600000" step="1" value="33000" >
+                        </label>
+
+                        <label>
+                            <span>Duration ( In Month ) : <span class="value_box" id="duration_box" > 0 Month </span></span>
+                            <input type="range" name="duration" min="12" max="120" step="1" value="36" >
+                        </label>
+
+                        <label>
+                            <span>Loan Rate ( In DH )</span>
+                            <input type="text" name="loan_rate" readonly>
+                        </label>
+
+                        <button onclick="collect_loan_information(event)" >Next</button>
+
+                    </section>
+                    <!-- END LOAN INFORMATION FORM  -->
+
+                    <!-- CONTACT INFORMATION FORM  -->
+                    <section class="contact_information hidden" id="contact_information"  >
+
+                        <label>
+                            <span>Email : </span>
+                            <input type="text" name="email" placeholder="john@xyz.com" >
+                        </label>
+
+                        <label>
+                            <span>Phone Number : </span>
+                            <input type="text" name="phone" placeholder="0612345678" >
+                        </label>
+
+                        <button onclick="collect_contact_information(event)" >Next</button>
+
+                    </section>
+                    <!-- END CONTACT INFORMATION FORM  -->
+
+                    <!-- PERSONAL INFORMATION FORM  -->
+                    <section class="personal_information hidden" id="personal_information"  >
+
+                        <label>
+                            <span>First Name : </span>
+                            <input type="text" name="first_name" placeholder="John" >
+                        </label>
+
+                        <label>
+                            <span>Last Name : </span>
+                            <input type="text" name="last_name" placeholder="Doe" >
+                        </label>
+
+                        <label>
+                            <span>CNIE : </span>
+                            <input type="text" name="cnie" placeholder="MD123456" >
+                        </label>
+
+                        <label>
+                            <span>Birth Date : </span>
+                            <input type="date" name="birth_date" >
+                        </label>
+
+                        <label>
+                            <span>Hiring Date : </span>
+                            <input type="date" name="hiring_date" >
+                        </label>
+
+                        <label>
+                            <span>Total Monthly Revenue : </span>
+                            <input type="number" name="monthly_revenue" placeholder="5000 DH" >
+                        </label>
+
+                        <span>Do you have any outstanding credits? : </span>
+                        <div style="display: flex; gap: 20px; " >
+                            <label class="normal" >
+                                <input type="radio" name="outstanding_credits" value="yes" >
+                                <span>Yes</span>
+                            </label>
+
+                            <label class="normal" >
+                                <input type="radio" name="outstanding_credits" value="no" checked >
+                                <span>No</span>
+                            </label>
+                        </div>
+
+                        <label class="normal" >
+                            <input type="checkbox" name="general_conditions" >
+                            <span>
                             I have read and accept <a href="" ><u>the general conditions of use</u></a> appearing on the legal information, in particular the mention relating to the protection of personal data
                         </span>
-                    </label>
+                        </label>
 
-                    <button>Request Credit</button>
+                        <button onclick="collect_personal_information(event)">Request Credit</button>
 
-                </section>
-                <!-- END PERSONAL INFORMATION FORM  -->
+                    </section>
+                    <!-- END PERSONAL INFORMATION FORM  -->
+                </form>
 
                 <div class="info_box" >
                     <p>
@@ -170,28 +174,8 @@
                 <h2 class="title" >Summary :</h2>
                 <div class="contents" >
 
-                    <div class="information_section" >
+                    <div class="information_section" id="no_data" >
                         <h3 class="danger" > No Data Yet !</h3>
-                    </div>
-
-                    <div class="information_section" >
-                        <h3> Project :</h3>
-                        <p>Lorem Ipsum Project name</p>
-                    </div>
-
-                    <div class="information_section" >
-                        <h3> Credit Details :</h3>
-                        <div><p class="title" >Email :</p> <p>amine@proton.me</p></div>
-                        <div><p class="title" >Phone :</p> <p>0658741263</p></div>
-                    </div>
-
-                    <div class="information_section" >
-                        <h3> Credit Details :</h3>
-                        <div><p class="title" >You are :</p> <p>Amine El karroudi</p></div>
-                        <div><p class="title" >Amount :</p> <p>10 000 DH</p></div>
-                        <div><p class="title" >Duration :</p> <p>24 Month</p></div>
-                        <div><p class="title" >Monthly Payment :</p> <p>458,45 DH</p></div>
-                        <div><p class="title" >Application Fees :</p> <p>500 DH</p></div>
                     </div>
 
                 </div>
@@ -201,6 +185,7 @@
         </section>
     </main>
 
-    <script src="styles/js/calculate_loan_rate.js" ></script>
+    <script src="styles/js/index.js" ></script>
+
 </body>
 </html>
